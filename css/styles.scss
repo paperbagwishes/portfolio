@@ -4,7 +4,7 @@
 @import "lightgallery";
 @import "lg-transitions";
 
-body {
+/*body {
     background: #ccc;
 }
 
@@ -17,9 +17,18 @@ main {
 
 // RWD header img
 main header img {
+    //width: 1400px;
+    //height: 200px;
+    //max-width: 100%;
+   // max-height: 100%;
+  // background-size: 80% 20%;
+ position: relative;
+    height: 500px;
     width: 100%;
-    max-width: 100%;
+    
+    
 }
+
 
 // Random Backgrounds
 .bg0 {
@@ -54,5 +63,207 @@ article figure {
 
 
 
+*/
 
+/********************
+YOUR STYLES
+*******************/
+body {
+	font-family: futura;
+	color: black;
+	font-size: 1em;	
+	
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	width: 100%;
+	position:absolute;
+	top:-4em;
+	left:0;
+	width:100%;
+	height:100%;
+	
+}
+a,
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+/*      light box       */
+.lg-sub-html {
+	width: 50%;
+	margin: 3em auto;
+	border-radius: .5em;
+}
+.lg-sub-html:hover {
+	opacity: 1;
+}
+.lg-sub-html h1,
+.lg-sub-html p {
+	text-align: left;
+}
+.lg-sub-html p {
+	padding-bottom: 2.5em;
+}
+.lg-toolbar {
+	background: black;
+	opacity: .5;
+	transition: 2s ease;
+}
+.lg-toolbar:hover {
+	background: red;
+	opacity: 1;
+	transition: .5s ease;
+}
+
+.lg-prev lg-icon {
+	size: 100%;
+}
+
+.caption {
+  display: none;
+	
+}
+.caption p {
+	width: 50%;
+}
+
+figure {
+background: white;
+padding:0;
+margin: 0 auto;
+justify-content: center;
+width: 100%;
+	
+}
+figcaption {
+  padding: 1em;  
+}
+
+/******imageBoxes******/
+img {
+	width: 100%;
+	transition: .5s;
+	background-color: black;
+}
+
+.hover {
+	position: relative;
+	background: black;
+	margin:1em;
+}
+.hide {
+	visibility: hidden;
+	overflow: hidden;
+}
+h2 {
+	opacity: 0;
+ position: absolute;
+	bottom: 0px;
+	right: 5px;
+  padding: 0 .5em;
+color: white;
+	font-size: 1em;
+}
+.hover:hover h2 {
+    letter-spacing: 2px;
+	opacity: 1;
+    transition: 1s ease;
+}
+.hover:hover img {
+	opacity: .1;
+}
+
+/* ---- Navigation ---- */
+header {
+	background: white;
+	width: 100%;
+	padding: 0 0 .5em 0;
+	margin: 4em auto .5em;
+	border-bottom: solid black 5px;
+}
+.name,
+.main-nav {
+	margin: 0;
+}
+.name a,
+.main-nav a {
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	padding: .1em 0;
+}
+.main-nav a {
+  margin-right: 2em;
+}
+.main-nav a:hover {
+	color: lightseagreen;
+}
+ul {
+	list-style: none;
+}
+
+/********************
+MEDIA QUERIES
+*******************/
+/* Mobile: 320px = 20em */
+@media screen and (min-width: 20em) { 
+
+  
+}
+
+/* Tablet:  768px = 160em */
+@media screen and (min-width: 48em)  {
+
+	figure {
+	display: flex;
+ flex-wrap: wrap;
+	}
+img {
+	display: flex;
+	width: 350px;
+	}
+	.hover {
+		margin: .5em;
+	}	
+	.main-nav,
+.main-header {
+  display: flex;
+}
+.main-header {
+  flex-direction: column;
+  align-items: center;
+}	
+
+
+}
+
+/* Desktop: 1280px = 80em */
+@media screen and (min-width: 80em) { 
+	figure {
+		max-width: 1829px;
+	}
+	header {
+		max-width: 1448px;
+		padding-top: 2em;
+	}
+	
+	ul, li, .main-header {
+    flex-direction: row;
+    justify-content:space-between; 
+  }
+	
+	.name {
+		padding-left: 10.5%;
+	
+	}
+	ul {
+		padding-right: 8.5%;
+	}
+	
+	
+}
 

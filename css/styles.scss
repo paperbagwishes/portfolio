@@ -1,0 +1,58 @@
+/* Grand Central Station. Operator. Main. */
+// Imports
+@import "normalize";
+@import "lightgallery";
+@import "lg-transitions";
+
+body {
+    background: #ccc;
+}
+
+// Layout
+main {
+    background: #fff;
+    margin: 0 auto;
+    width: 90%;
+}
+
+// RWD header img
+main header img {
+    width: 100%;
+    max-width: 100%;
+}
+
+// Random Backgrounds
+.bg0 {
+  background: #656565;
+}
+
+.bg1 {
+  background: #c3c3c3;
+}
+
+.bg2 {
+  background: #989898;
+}
+
+// Portfolio Items
+// Flexbox Layout
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+article figure {
+  background: orange;
+  padding: 2em;
+  width: 20em;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+
+
+
